@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +11,18 @@
       color: #333333;
       font-family: Arial, sans-serif;
     }
+
     header {
       padding: 20px;
       text-align: center;
       position: relative;
     }
+
     h1 {
       color: #333333;
       margin: 0;
     }
+
     .logo {
       position: absolute;
       top: 10px;
@@ -29,9 +33,11 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
+
     .header-buttons {
       margin-top: 10px;
     }
+
     .header-buttons a {
       display: inline-block;
       margin-right: 10px;
@@ -41,13 +47,16 @@
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
+
     .header-buttons a:hover {
       background-color: #999999;
     }
+
     main {
       padding: 20px;
       text-align: center;
     }
+
     .image-container {
       display: inline-block;
       width: 80%;
@@ -57,28 +66,54 @@
       background-color: white;
       border: 1px solid #CCCCCC;
     }
+
     .slideshow {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 400px;
       overflow: hidden;
+      position: relative;
     }
+
     .slideshow img {
       width: 100%;
       height: auto;
       object-fit: contain;
       transition: transform 0.3s ease;
     }
+
     .slideshow img:hover {
       transform: scale(1.2);
     }
+
+    .price-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 8px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .slideshow:hover .price-overlay {
+      opacity: 1;
+    }
+
     .contact-info {
       margin-top: 20px;
       font-size: 14px;
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Reach</h1>
@@ -93,18 +128,23 @@
     <div class="image-container">
       <div class="slideshow">
         <img src="https://i.pinimg.com/564x/4d/39/31/4d3931a13f68ad930909ec9a82611f2b.jpg" alt="Image 1">
+        <div class="price-overlay">EUR 24.99</div>
       </div>
       <div class="slideshow">
         <img src="https://i.pinimg.com/564x/f7/94/e1/f794e169664e7eb5e76e1bdfde7d5679.jpg" alt="Image 2">
+        <div class="price-overlay">EUR 29.99</div>
       </div>
       <div class="slideshow">
         <img src="https://i.pinimg.com/564x/8b/57/0a/8b570a5ec943fc35a8b07a17ffd4d2a9.jpg" alt="Image 3">
+        <div class="price-overlay">EUR 24.99</div>
       </div>
       <div class="slideshow">
         <img src="https://i.pinimg.com/564x/89/ba/ba/89baba9327b853d8dfc931f4d6d7c02f.jpg" alt="Image 4">
+        <div class="price-overlay">EUR 29.99</div>
       </div>
       <div class="slideshow">
         <img src="https://i.pinimg.com/564x/4a/2b/a9/4a2ba93b7e7d3c95f27f79a95730f582.jpg" alt="Image 5">
+        <div class="price-overlay">EUR 29.99</div>
       </div>
     </div>
     <div class="contact-info">
@@ -112,4 +152,5 @@
     </div>
   </main>
 </body>
+
 </html>
